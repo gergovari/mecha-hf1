@@ -1,0 +1,4 @@
+{"rule":"MORFOLOGIK_RULE_EN_US","sentence":"^\\Qfillbetween\\E$"}
+{"rule":"MORFOLOGIK_RULE_EN_US","sentence":"^\\QDynalight\\E$"}
+{"rule":"MORFOLOGIK_RULE_EN_US","sentence":"^\\QBoulton & Watt gőzgép\\E$"}
+{"rule":"MORFOLOGIK_RULE_EN_US","sentence":"^\\Qtabular Dynalight\\E$"}

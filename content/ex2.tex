@@ -1,0 +1,41 @@
+\section{Analízis}
+\subsection{a) Átviteli függvények}
+Veszem bemenetnek a kapocsfeszültséget és a lassító $M_t$ terhelő nyomatékot, kimenetnek a tárcsa szögsebességét és az armatúraáramot. A korábbiak alapján a 4 átviteli függvény:
+\begin{align}
+W_1(s) &= \frac{\Omega_t}{U} = \frac{7.2581}{7.847 \cdot 10^{-5} s^{2} + 0.7889 s + 53.9315} \\
+W_2(s) &= \frac{I}{U} = \frac{0.0413 s + 0.0655}{7.847 \cdot 10^{-5} s^{2} + 0.7889 s + 53.9315} \\
+W_3(s) &= \frac{\Omega_t}{M_t} = \frac{- 0.0019 s - 19.1}{7.847 \cdot 10^{-5} s^{2} + 0.7889 s + 53.9315} \\
+W_4(s) &= \frac{I}{M_t} = \frac{7.2581}{7.847 \cdot 10^{-5} s^{2} + 0.7889 s + 53.9315}
+\end{align}
+
+\subsection{b) Állandósult értékek (végérték tétel)}
+A végérték tétel kimondja, hogy egységugrás esetén $\lim_{t \to \infty} y(t) = \lim_{s \to 0} s \frac{W(s)}{s} = W(0)$. Tehát $s=0$ behelyettesítéssel:
+\begin{align}
+\lim_{s \to 0} W_1(s) &= 0.13458 \text{ rad/s/V} \\
+\lim_{s \to 0} W_2(s) &= 0.001215 \text{ A/V} \\
+\lim_{s \to 0} W_3(s) &= -0.35415 \text{ rad/s/Nm} \\
+\lim_{s \to 0} W_4(s) &= 0.13458 \text{ A/Nm}
+\end{align}
+
+\subsection{c) Feszültség-szögsebesség átmeneti függvény algebrai alakja}
+Egységugrás esetén $Y_1(s) = \frac{W_1(s)}{s}$. Részlettörtekre bontva és visszatranszformálva a kiszámított értékeket kapom:
+\begin{equation}
+y_1(t) = 7.2581 \cdot 10^0 \cdot e^{-5027 t} \cdot \left( A e^{4958 t} + B e^{-4958 t} \right) + 0.13458
+\end{equation}
+amely leegyszerűsítve az időállandókat használva:
+\begin{equation}
+y_1(t) = 0.13458 + c_1 e^{-t/T_1} + c_2 e^{-t/T_2}
+\end{equation}
+
+\subsection{d) Szögsebesség időfüggvénye névleges feszültség esetén}
+Lásd az 1. szakasz grafikonját, mely már a névleges ($u_n = 30$ V) feszültségugrásra mutatja a szimulált görbét. A végső elért szögsebesség $\approx 4.037$ rad/s.
+
+\subsection{e) Maximális terhelőnyomaték maximális áramhoz}
+Tudom, hogy az áram kifejezhető a bemenetekből:
+\begin{equation}
+i(t \to \infty) = W_2(0) u_n + W_4(0) M_t
+\end{equation}
+A maximális állandósult (névleges) áram az adatlapon $0.47$ A. Ebből a terhelőnyomaték kifejezhető:
+\begin{equation}
+M_t = \frac{i_{max} - W_2(0) u_n}{W_4(0)} = \frac{0.47 - 0.001215 \cdot 30}{0.13458} = 3.2215 \text{ Nm}
+\end{equation}

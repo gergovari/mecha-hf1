@@ -1,23 +1,22 @@
 \babel@toc {magyar}{}\relax 
 \contentsline {section}{\numberline {1}A hajtáslánc modellezése}{1}{}%
 \contentsline {subsection}{\numberline {1.1}a) A motor és hajtómű azonosítása}{1}{}%
-\contentsline {subsection}{\numberline {1.2}b) Struktúragráf}{1}{}%
+\contentsline {subsection}{\numberline {1.2}b) Struktúragráf}{2}{}%
 \contentsline {subsection}{\numberline {1.3}c) Impedanciahálózat}{2}{}%
-\contentsline {subsection}{\numberline {1.4}d) Négypólusok kiküszöbölése}{2}{}%
+\contentsline {subsection}{\numberline {1.4}d) Négypólusok kiküszöbölése}{3}{}%
 \contentsline {subsection}{\numberline {1.5}e) Kapocsfeszültség és tárcsa szögsebesség átviteli függvény}{3}{}%
-\contentsline {subsection}{\numberline {1.6}f) Átmeneti függvény ábrázolása}{3}{}%
+\contentsline {subsection}{\numberline {1.6}f) Átmeneti függvény ábrázolása}{4}{}%
 \contentsline {subsection}{\numberline {1.7}g) A modell időállandói}{4}{}%
-\contentsline {section}{\numberline {2}Analízis}{4}{}%
-\contentsline {subsection}{\numberline {2.1}a) Átviteli függvények}{4}{}%
+\contentsline {section}{\numberline {2}Analízis}{5}{}%
+\contentsline {subsection}{\numberline {2.1}a) Átviteli függvények}{5}{}%
 \contentsline {subsection}{\numberline {2.2}b) Állandósult értékek (végérték tétel)}{5}{}%
 \contentsline {subsection}{\numberline {2.3}c) Feszültség-szögsebesség átmeneti függvény algebrai alakja}{5}{}%
 \contentsline {subsection}{\numberline {2.4}d) Szögsebesség időfüggvénye névleges feszültség esetén}{5}{}%
-\contentsline {subsection}{\numberline {2.5}e) Maximális terhelőnyomaték maximális áramhoz}{5}{}%
-\contentsline {section}{\numberline {3}Az egyenáramú motor diszkrét idejű modellezése}{5}{}%
-\contentsline {subsection}{\numberline {3.1}a) Folytonos idejű állapottér modell}{6}{}%
-\contentsline {subsection}{\numberline {3.2}b) Előretartó (forward) Euler modell}{6}{}%
-\contentsline {subsection}{\numberline {3.3}c) Hátratartó (backward) Euler modell}{6}{}%
-\contentsline {subsection}{\numberline {3.4}d) A diszkrét és folytonos modellek viselkedése}{7}{}%
-\contentsline {section}{\numberline {4}Szimulációs vizsgálat (Szorgalmi feladat)}{8}{}%
-\contentsline {section}{\numberline {5}Mellékletek}{8}{}%
-\contentsline {subsection}{\numberline {5.1}Python forráskód}{8}{}%
+\contentsline {subsection}{\numberline {2.5}e) Maximális terhelőnyomaték maximális áramhoz}{6}{}%
+\contentsline {section}{\numberline {3}Az egyenáramú motor diszkrét idejű modellezése}{7}{}%
+\contentsline {subsection}{\numberline {3.1}a) Folytonos idejű állapottér modell}{7}{}%
+\contentsline {subsection}{\numberline {3.2}b) Előretartó (forward) Euler modell}{7}{}%
+\contentsline {subsection}{\numberline {3.3}c) Hátratartó (backward) Euler modell}{7}{}%
+\contentsline {subsection}{\numberline {3.4}d) A diszkrét és folytonos modellek viselkedése}{8}{}%
+\contentsline {section}{\numberline {4}Mellékletek}{9}{}%
+\contentsline {subsection}{\numberline {4.1}Python forráskód}{9}{}%

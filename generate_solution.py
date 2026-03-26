@@ -158,22 +158,6 @@ plt.grid(True)
 plt.legend()
 plt.savefig("res/imgs/fig_EulerHatra.png")
 
-# Szorgalmi feladat: Konstans terhelőnyomaték szimulációja
-B_mat_full = np.array([[1/L_val, 0], [0, -1/Jr_val]])
-sys_full = signal.StateSpace(A, B_mat_full, C, np.zeros((1,2)))
-t_full = np.linspace(0, 0.5, 1000)
-# A gerjesztés mátrixa: első oszlop feszültség, második oszlop lassító nyomaték (0.01 Nm)
-u_full = np.vstack([np.ones(len(t_full)) * un, np.ones(len(t_full)) * 0.01]).T
-t_sim, y_sim, x_sim = signal.lsim(sys_full, U=u_full, T=t_full)
-
-plt.figure()
-plt.plot(t_sim, y_sim, 'g-', lw=2)
-plt.xlabel("t [s]")
-plt.ylabel(r"Szögsebesség $\omega$ [rad/s]")
-plt.title(r"Ugrásválasz terhelőnyomaték ($M_t = 0.01$ Nm) mellett")
-plt.grid(True)
-plt.savefig("res/imgs/fig_Szorgalmi.png")
-
 # Hajtáslánc ugrásválasza 1.f feladatra (csak a tárcsa figyelembevételével)
 t_w1, y_w1 = signal.step(signal.TransferFunction(
     [float(c) for c in sp.Poly(sp.fraction(W1_val)[0], s).all_coeffs()],

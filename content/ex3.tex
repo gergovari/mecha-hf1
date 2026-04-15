@@ -46,6 +46,7 @@ A diszkretizált állapottér egyenletek előretartó Euler módszerrel:
         0
     \end{bmatrix}
 \end{equation}
+$\mathbf{C}_{de} = \begin{bmatrix} 0 & 1 \end{bmatrix}$, $\mathbf{D}_{de} = 0$.
 
 \subsection{c) Hátratartó (backward) Euler modell}
 A hátratartó Euler módszer diszkretizációs formulája:
@@ -62,6 +63,10 @@ A hátratartó Euler módszer diszkretizációs formulája:
         0.01489 \\
         17.8265
     \end{bmatrix}
+\end{equation}
+Kimeneti mátrixok a hátratartó esetre ($\mathbf{C}_{dh} = \mathbf{C} \mathbf{A}_{dh}$, $\mathbf{D}_{dh} = \mathbf{D} + \mathbf{C} \mathbf{B}_{dh}$):
+\begin{equation}
+    \mathbf{C}_{dh} = \begin{bmatrix} 0.8467 & 0.2681 \end{bmatrix}, \quad \mathbf{D}_{dh} = 17.8265
 \end{equation}
 
 \subsection{d) A diszkrét és folytonos modellek viselkedése}

@@ -11,7 +11,7 @@
 \contentsline {subsection}{\numberline {2.1}a) Átviteli függvények}{5}{}%
 \contentsline {subsection}{\numberline {2.2}b) Állandósult értékek (végérték tétel)}{5}{}%
 \contentsline {subsection}{\numberline {2.3}c) Feszültség-szögsebesség átmeneti függvény algebrai alakja}{5}{}%
-\contentsline {subsection}{\numberline {2.4}d) Szögsebesség időfüggvénye névleges feszültség esetén}{5}{}%
+\contentsline {subsection}{\numberline {2.4}d) Szögsebesség időfüggvénye névleges feszültség esetén}{6}{}%
 \contentsline {subsection}{\numberline {2.5}e) Maximális terhelőnyomaték maximális áramhoz}{6}{}%
 \contentsline {section}{\numberline {3}Az egyenáramú motor diszkrét idejű modellezése}{7}{}%
 \contentsline {subsection}{\numberline {3.1}a) Folytonos idejű állapottér modell}{7}{}%

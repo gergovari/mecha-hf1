@@ -158,16 +158,28 @@ plt.grid(True)
 plt.legend()
 plt.savefig("res/imgs/fig_EulerHatra.png")
 
-# Hajtáslánc ugrásválasza 1.f feladatra (csak a tárcsa figyelembevételével)
-t_w1, y_w1 = signal.step(signal.TransferFunction(
+# Hajtáslánc ugrásválasza 1.f és 2.d feladatokra
+t_full = np.linspace(0, 0.1, 1000)
+tf = signal.TransferFunction(
     [float(c) for c in sp.Poly(sp.fraction(W1_val)[0], s).all_coeffs()],
     [float(c) for c in sp.Poly(sp.fraction(W1_val)[1], s).all_coeffs()]
-), T=t_full)
-y_w1 = y_w1 * un
+)
+t_w1, y_w1 = signal.step(tf, T=t_full)
+
+# 1.f: 1V egységugrás
 plt.figure()
-plt.plot(t_w1, y_w1, 'purple', lw=2)
+plt.plot(t_w1, y_w1 * 1.0, 'purple', lw=2)
 plt.xlabel("t [s]")
 plt.ylabel(r"Tárcsa Szögsebesség $\omega$ [rad/s]")
-plt.title(r"A hajtáslánc ugrásválasza (1.f és 2.d feladat)")
+plt.title(r"A hajtáslánc 1V-os ugrásválasza (1.f feladat)")
 plt.grid(True)
-plt.savefig("res/imgs/fig_HajtaslancUgras.png")
+plt.savefig("res/imgs/fig_HajtaslancUgras1V.png")
+
+# 2.d: 30V névleges feszültség ugrásválasz
+plt.figure()
+plt.plot(t_w1, y_w1 * un, 'purple', lw=2)
+plt.xlabel("t [s]")
+plt.ylabel(r"Tárcsa Szögsebesség $\omega$ [rad/s]")
+plt.title(r"A hajtáslánc ugrásválasza névleges fesz. (30V) mellett (2.d)")
+plt.grid(True)
+plt.savefig("res/imgs/fig_HajtaslancUgras30V.png")

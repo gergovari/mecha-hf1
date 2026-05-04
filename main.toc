@@ -9,14 +9,14 @@
 \contentsline {subsection}{\numberline {1.7}g) A modell időállandói}{4}{}%
 \contentsline {section}{\numberline {2}Analízis}{5}{}%
 \contentsline {subsection}{\numberline {2.1}a) Átviteli függvények}{5}{}%
-\contentsline {subsection}{\numberline {2.2}b) Állandósult értékek (végérték tétel)}{5}{}%
-\contentsline {subsection}{\numberline {2.3}c) Feszültség-szögsebesség átmeneti függvény algebrai alakja}{5}{}%
-\contentsline {subsection}{\numberline {2.4}d) Szögsebesség időfüggvénye névleges feszültség esetén}{6}{}%
-\contentsline {subsection}{\numberline {2.5}e) Maximális terhelőnyomaték maximális áramhoz}{6}{}%
-\contentsline {section}{\numberline {3}Az egyenáramú motor diszkrét idejű modellezése}{7}{}%
-\contentsline {subsection}{\numberline {3.1}a) Folytonos idejű állapottér modell}{7}{}%
-\contentsline {subsection}{\numberline {3.2}b) Előretartó (forward) Euler modell}{7}{}%
-\contentsline {subsection}{\numberline {3.3}c) Hátratartó (backward) Euler modell}{7}{}%
-\contentsline {subsection}{\numberline {3.4}d) A diszkrét és folytonos modellek viselkedése}{8}{}%
-\contentsline {section}{\numberline {4}Mellékletek}{9}{}%
-\contentsline {subsection}{\numberline {4.1}Python forráskód}{9}{}%
+\contentsline {subsection}{\numberline {2.2}b) Állandósult értékek (statikus erősítések)}{5}{}%
+\contentsline {subsection}{\numberline {2.3}c) Feszültség-szögsebesség átviteli függvény polinom alakja}{6}{}%
+\contentsline {subsection}{\numberline {2.4}d) Szögsebesség időfüggvénye névleges feszültség esetén}{7}{}%
+\contentsline {subsection}{\numberline {2.5}e) Maximális terhelőnyomaték maximális áramhoz}{7}{}%
+\contentsline {section}{\numberline {3}Az egyenáramú motor diszkrét idejű modellezése}{8}{}%
+\contentsline {subsection}{\numberline {3.1}a) Folytonos idejű állapottér modell}{8}{}%
+\contentsline {subsection}{\numberline {3.2}b) Előretartó (forward) Euler modell}{8}{}%
+\contentsline {subsection}{\numberline {3.3}c) Hátratartó (backward) Euler modell}{8}{}%
+\contentsline {subsection}{\numberline {3.4}d) A diszkrét és folytonos modellek viselkedése}{9}{}%
+\contentsline {section}{\numberline {4}Mellékletek}{10}{}%
+\contentsline {subsection}{\numberline {4.1}Python forráskód}{10}{}%

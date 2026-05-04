@@ -215,7 +215,9 @@ A terhelés impedanciája a hajtómű után:
 \end{figure}
 
 \subsection{d) Négypólusok kiküszöbölése}
-Redukálom a teljes hálózatot a hajtómű kihajtó oldalára (tárcsa oldala).
+Redukálom a teljes hálózatot a hajtómű kihajtó oldalára (tárcsa oldala). A Thevenin-tételt alkalmazva a rendszerből eltávolíthatóak az ideális négypólusok (a motor $k_m$ girátora és a hajtómű $N$ transzformátora), amivel a számítások jelentősen leegyszerűsödnek. Mivel az $U_{be}$ feszültségforrás is keresztülhalad ezeken a négypólusokon, a redukált hálózatban ez egy új, átszámított forrásként jelenik meg: $U'_{be} = U_{be} k_m N$.
+
+A hálózat elemeinek impedanciája a mechanikai oldalon a négypólusok áttételeinek négyzetével osztva jelenik meg.
 Az elektromos impedancia redukálva:
 \begin{equation}
     Z_{12}(s) = \frac{Z_1(s)}{k_m^2 N^2} = \frac{R + s L}{k_m^2 N^2}
@@ -231,64 +233,46 @@ Az eredő "belső" impedancia, ami a motor és áttétel együtteséből adódik
 
 \begin{figure}[H]
     \centering
-    \resizebox{\linewidth}{!}{
+    \resizebox{0.7\linewidth}{!}{
         \begin{tikzpicture}[>=stealth, thick,
-                block/.style={rectangle, draw, minimum width=1.5cm, minimum height=0.8cm, align=center},
-                largeblock/.style={rectangle, draw, minimum width=2.5cm, minimum height=3cm, align=center}
+                block/.style={rectangle, draw, minimum width=1.5cm, minimum height=0.8cm, align=center}
             ]
 
             % Voltage source
-            \draw[fill=white] (0,1.5) circle (0.4) node[left=0.5cm] {$U_{be}$};
+            \draw[fill=white] (0,1.5) circle (0.4) node[left=0.5cm] {$U'_{be} = U_{be} k_m N$};
             \draw[->] (0,1.9) -- (0,1.1);
-            \draw (0,1.9) -- (0,3);
-            \draw (0,1.1) -- (0,0);
+            \draw (0,1.9) -- (0,3) -- (1.5,3);
+            \draw (0,1.1) -- (0,0) -- (1.5,0);
 
-            % Z1
-            \node[block] (Z1) at (2.5, 3) {$Z_1$};
-            \draw (0,3) -- (Z1);
+            % Z12
+            \node[block] (Z12) at (2.5, 3) {$Z_{12}$};
+            \draw (1.5,3) -- (Z12.west);
+            \draw (Z12.east) -- (5,3);
+            \draw (1.5,0) -- (5,0);
 
-            % Motor block
-            \node[largeblock, label=above:{\textbf{DC motor}}] (motor) at (6.5, 1.5) {
-                    $I = \frac{1}{k_m} M_1$\\[0.5cm]
-                    $U = k_m \omega_1$
-                };
-            \draw (Z1) -- (motor.west |- 0,3);
-            \draw (0,0) -- (motor.west |- 0,0);
+            % Z22
+            \node[block] (Z22) at (5, 1.5) {$Z_{22}$};
+            \draw (5,3) -- (Z22.north);
+            \draw (Z22.south) -- (5,0);
+            \fill (5,3) circle (2pt); \fill (5,0) circle (2pt);
 
-            % Middle impedance Z2
-            \node[block, minimum width=1.5cm] (Z2) at (10, 1.5) {$Z_2$};
-
-            % Attétel block
-            \node[largeblock, label=above:{\textbf{Áttétel}}] (att) at (13.5, 1.5) {
-                    $M_1 = \frac{1}{N} M_2$\\[0.5cm]
-                    $\omega_1 = N \omega_2$
-                };
-
-            \draw (motor.east |- 0,3) -- (att.west |- 0,3);
-            \draw (motor.east |- 0,0) -- (att.west |- 0,0);
-
-            \draw (10, 3) -- (Z2.north); \draw (Z2.south) -- (10, 0);
-            \fill (10, 3) circle (2pt); \fill (10, 0) circle (2pt);
-            \fill (motor.east |- 0,3) circle (2pt); \fill (motor.east |- 0,0) circle (2pt);
-
-            % Right side
-            \node[block, minimum width=1cm] (ZJt) at (16.5, 1.5) {$Z_{J_t}$};
-            \draw (att.east |- 0,3) -- (18, 3);
-            \draw (att.east |- 0,0) -- (18, 0);
-            \fill (att.east |- 0,3) circle (2pt); \fill (att.east |- 0,0) circle (2pt);
-
-            \draw (16.5, 3) -- (ZJt.north); \draw (ZJt.south) -- (16.5, 0);
-            \fill (16.5, 3) circle (2pt); \fill (16.5, 0) circle (2pt);
+            % Zt
+            \node[block] (Zt) at (8, 1.5) {$Z_{t}$};
+            \draw (5,3) -- (8,3) -- (Zt.north);
+            \draw (5,0) -- (8,0) -- (Zt.south);
+            \fill (8,3) circle (2pt); \fill (8,0) circle (2pt);
 
             % Mt Effort Source
-            \draw[fill=white] (18,1.5) circle (0.4) node[right=0.5cm] {$-M_t$};
-            \draw[<-] (18,1.9) -- (18,1.1);
-            \draw (18,1.9) -- (18,3);
-            \draw (18,1.1) -- (18,0);
+            \draw (8,3) -- (10.5,3);
+            \draw (8,0) -- (10.5,0);
+            \draw[fill=white] (10.5,1.5) circle (0.4) node[right=0.5cm] {$-M_t$};
+            \draw[<-] (10.5,1.9) -- (10.5,1.1);
+            \draw (10.5,1.9) -- (10.5,3);
+            \draw (10.5,1.1) -- (10.5,0);
 
         \end{tikzpicture}
     }
-    \caption{Az egyesített teljes impedanciahálózat}
+    \caption{Az egyesített, négypólusoktól mentes redukált impedanciahálózat}
 \end{figure}
 
 \subsection{e) Kapocsfeszültség és tárcsa szögsebesség átviteli függvény}

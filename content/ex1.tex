@@ -215,7 +215,7 @@ A terhelés impedanciája a hajtómű után:
 \end{figure}
 
 \subsection{d) Négypólusok kiküszöbölése}
-Redukálom a teljes hálózatot a hajtómű kihajtó oldalára (tárcsa oldala). A Thevenin-tételt alkalmazva a rendszerből eltávolíthatóak az ideális négypólusok (a motor $k_m$ girátora és a hajtómű $N$ transzformátora), amivel a számítások jelentősen leegyszerűsödnek. Mivel az $U_{be}$ feszültségforrás is keresztülhalad ezeken a négypólusokon, a redukált hálózatban ez egy új, átszámított forrásként jelenik meg: $U'_{be} = U_{be} k_m N$.
+Redukálom a teljes hálózatot a hajtómű kihajtó oldalára (tárcsa oldala). A Thevenin-tételt alkalmazva a rendszerből eltávolíthatóak az ideális négypólusok (a motor $k_m$ girátora és a hajtómű $N$ transzformátora), amivel a számítások jelentősen leegyszerűsödnek. Mivel az $U_{be}$ feszültségforrás is keresztülhalad ezeken a négypólusokon, a redukált hálózatban ez egy szögsebesség forrásként jelenik meg: $\Omega'_{be} = \frac{U_{be}}{k_m N}$.
 
 A hálózat elemeinek impedanciája a mechanikai oldalon a négypólusok áttételeinek négyzetével osztva jelenik meg.
 Az elektromos impedancia redukálva:
@@ -238,9 +238,9 @@ Az eredő "belső" impedancia, ami a motor és áttétel együtteséből adódik
                 block/.style={rectangle, draw, minimum width=1.5cm, minimum height=0.8cm, align=center}
             ]
 
-            % Voltage source
-            \draw[fill=white] (0,1.5) circle (0.4) node[left=0.5cm] {$U'_{be} = U_{be} k_m N$};
-            \draw[->] (0,1.9) -- (0,1.1);
+            % Angular velocity source (szögsebesség forrás)
+            \draw[fill=white] (0,1.5) circle (0.4) node[left=0.5cm] {$\Omega'_{be} = \frac{U_{be}}{k_m N}$};
+            \draw[<-, thick] (-0.35, 1.2) to[bend left=30] (-0.35, 1.8);
             \draw (0,1.9) -- (0,3) -- (1.5,3);
             \draw (0,1.1) -- (0,0) -- (1.5,0);
 

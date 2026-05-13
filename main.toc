@@ -10,7 +10,7 @@
 \contentsline {section}{\numberline {2}Analízis}{5}{}%
 \contentsline {subsection}{\numberline {2.1}a) Átviteli függvények}{5}{}%
 \contentsline {subsection}{\numberline {2.2}b) Állandósult értékek (statikus erősítések)}{5}{}%
-\contentsline {subsection}{\numberline {2.3}c) Feszültség-szögsebesség átviteli függvény polinom alakja}{6}{}%
+\contentsline {subsection}{\numberline {2.3}c) Feszültség-szögsebesség átmeneti függvénye algebrai alakban}{6}{}%
 \contentsline {subsection}{\numberline {2.4}d) Szögsebesség időfüggvénye névleges feszültség esetén}{7}{}%
 \contentsline {subsection}{\numberline {2.5}e) Maximális terhelőnyomaték maximális áramhoz}{7}{}%
 \contentsline {section}{\numberline {3}Az egyenáramú motor diszkrét idejű modellezése}{8}{}%
